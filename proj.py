@@ -32,7 +32,7 @@ def voice_input():
             return ""
         except sr.UnknownValueError:
             print("Sorry, I could not understand the audio.")
-            return "quit"
+            return "i want to stop"
 
 # Global API key declaration
 os.environ["GOOGLE_API_KEY"] = "YOUR API KEY"
@@ -70,7 +70,7 @@ def chatbot():
 
     while True:
         user_input = voice_input()  # Call the voice_input function to get user input
-        if "stop" in user_input.lower() :
+        if "i want to stop"== user_input.lower() :
             break
         
         try:
